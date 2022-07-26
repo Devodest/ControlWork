@@ -1,19 +1,19 @@
 ﻿int GetStringSize(string value)
 {
-    int strLen = 0;
+    int strlen = 0;
     for (int i = 0; i < value.Length; i++)
     {
-        strLen++;
+        strlen++;
     }
-    return strLen;
+    return strlen;
 }
-string[] ArrayAdd(string[] arrayOld, string value)
+string[] ArrayAdd(string[] arrayold, string value)
 {
-    string[] arrayNew = new string[arrayOld.Length + 1];
+    string[] arrayNew = new string[arrayold.Length + 1];
     int i = 0;
-    for (i = 0; i < arrayOld.Length; i++)
+    for (i = 0; i < arrayold.Length; i++)
     {
-        arrayNew[i] = arrayOld[i];
+        arrayNew[i] = arrayold[i];
     }
     arrayNew[arrayNew.Length - 1] = value;
     return arrayNew;
@@ -36,8 +36,8 @@ string[] results = new string[0];
 
 for (int i = 0; i < data.Length; i++)
 {
-    int strLen = GetStringSize(data[i]);
-    if (strLen <= letter)
+    int strlen = GetStringSize(data[i]);
+    if (strlen <= letter)
     {
         results = ArrayAdd(results, data[i]);
     }
