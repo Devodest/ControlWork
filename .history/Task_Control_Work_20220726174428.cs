@@ -2,6 +2,17 @@
 //длина которых меньше либо равна 3 символа. Первоначальный массив можно ввести с клавиатуры, 
 //либо задать на старте выполненния алгоритма.*
 
+string PrintArray(string[] array)
+{
+    int length = array.Length;
+    string words = String.Empty;
+    for (int i = 0; i < length; i++)
+    {
+        words += ($"Word{i + 1}: {array[i]} ");
+    }
+    return words;
+}
+
 int GetStringSize(string value)
 {
     int strlen = 0;
@@ -11,6 +22,7 @@ int GetStringSize(string value)
     }
     return strlen;
 }
+
 string[] ArrayAdd(string[] arrayold, string value)
 {
     string[] arrayNew = new string[arrayold.Length + 1];
@@ -19,34 +31,32 @@ string[] ArrayAdd(string[] arrayold, string value)
     {
         arrayNew[i] = arrayold[i];
     }
-    arrayNew[arrayNew.Length - 1] = value;
+    arrayNew[i + 1] = value;
     return arrayNew;
 }
 
 int letter = 3;
-string[] data = new string[]
-{
-    "Hello",
-    "World",
-    "Hi",
-    "Yes",
-    ":=)",
-    "1234",
-    "123",
-    "Russia",
-};
+string s = "Text, =:),New Text,Hello World, n";
+string[] data = s.Split(',');
+string separatedWords = PrintArray(data);
+Console.WriteLine(separatedWords);
 
 string[] results = new string[0];
 
 for (int i = 0; i < data.Length; i++)
 {
     int strlen = GetStringSize(data[i]);
+    Console.WriteLine(strlen + " " + i);
     if (strlen <= letter)
     {
         results = ArrayAdd(results, data[i]);
     }
 }
 
-Console.WriteLine(String.Join(", ", results));
+Console.WriteLine(results.Length);
+Console.WriteLine(PrintArray(results));
+
+/* CheckSize(a);
+PrintArray(a); */
 
 

@@ -31,9 +31,6 @@ string[] data = new string[]
     "Hi",
     "Yes",
     ":=)",
-    "1234",
-    "123",
-    "Russia",
 };
 
 string[] results = new string[0];

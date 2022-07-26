@@ -17,6 +17,7 @@ string[] ArrayAdd(string[] arrayold, string value)
     int i = 0;
     for (i = 0; i < arrayold.Length; i++)
     {
+        //Console.WriteLine((arrayold.Length + 1) + " " + arrayold[i] + " " + i);
         arrayNew[i] = arrayold[i];
     }
     arrayNew[arrayNew.Length - 1] = value;
@@ -31,9 +32,6 @@ string[] data = new string[]
     "Hi",
     "Yes",
     ":=)",
-    "1234",
-    "123",
-    "Russia",
 };
 
 string[] results = new string[0];
