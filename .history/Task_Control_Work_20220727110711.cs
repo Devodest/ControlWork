@@ -34,6 +34,7 @@ for (int i = 0; i < data.Length; i++)
 }
 
 File.WriteAllText("out.txt", String.Join(", ", results));
+Console.WriteLine(results.Length);
 
 sw.Stop();
 Console.WriteLine($"Time Spent: {sw.Elapsed}мс");
