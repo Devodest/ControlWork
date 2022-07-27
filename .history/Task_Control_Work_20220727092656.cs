@@ -39,4 +39,4 @@ Console.WriteLine(String.Join(", ", results));
 
 sw.Stop();
 
-Console.WriteLine($"Time Spent: {sw.ElapsedMilliseconds}мс");
+Console.WriteLine($"Time Spent: {sw}");

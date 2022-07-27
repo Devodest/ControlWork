@@ -2,6 +2,11 @@
 
 var sw = new Stopwatch();
 sw.Start();
+for (int i = 0; i < 1000; i++)
+{
+    Console.WriteLine(i);
+}
+sw.Stop();
 
 string[] ArrayAdd(string[] arrayOld, string value)
 {
@@ -37,6 +42,4 @@ for (int i = 0; i < data.Length; i++)
 
 Console.WriteLine(String.Join(", ", results));
 
-sw.Stop();
 
-Console.WriteLine($"Time Spent: {sw.ElapsedMilliseconds}мс");

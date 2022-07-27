@@ -1,9 +1,4 @@
-﻿using System.Diagnostics;
-
-var sw = new Stopwatch();
-sw.Start();
-
-string[] ArrayAdd(string[] arrayOld, string value)
+﻿string[] ArrayAdd(string[] arrayOld, string value)
 {
     string[] arrayNew = new string[arrayOld.Length + 1];
     int i = 0;
@@ -14,6 +9,7 @@ string[] ArrayAdd(string[] arrayOld, string value)
     arrayNew[arrayNew.Length - 1] = value;
     return arrayNew;
 }
+
 int letter = 3;
 string s = "Когда я встречал взрослого, который казался мне разумней и понятливей других,"  +
 "я показывал ему свой рисунок № 1 — я его сохранил и всегда носил с собой. Я хотел знать,"  +
@@ -37,6 +33,4 @@ for (int i = 0; i < data.Length; i++)
 
 Console.WriteLine(String.Join(", ", results));
 
-sw.Stop();
 
-Console.WriteLine($"Time Spent: {sw.ElapsedMilliseconds}мс");
