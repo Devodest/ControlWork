@@ -10,8 +10,8 @@
 
 # Instruction
 
-* Create metods (PrintArray) (CreateArray) (SizeCheck)
+* I'm Create metod ArrayAdd, where realese Array.Reverse 
 * run in a cycle each word
-* Check arrya on size, if arrayWords[i] <= Simbol then arrayOutWords = arrayWords[i]
+* Check arrya on size, if strLen <= letter then arrayNew[i] = arrayOld[i]
 * Write new array with new size.
 
